@@ -19,7 +19,7 @@ class BaseUtils {
   clickAndWait(webelement) {
     return element(webelement).click();
   }
-  
+
   navigateToURL(url) {
     return browser.get(url);
   }
@@ -35,6 +35,35 @@ class BaseUtils {
       browser.waitForAngularEnabled(false).then(() => {
         console.log("This is a non-angular website");
       });
+  }
+
+  navigateThroughPage(action) {
+    switch (action) {
+      case "back":
+        browser
+          .navigate()
+          .back()
+          .then(() => {
+            console.log("navigating to previous page");
+          });
+        break;
+      case "refresh":
+        browser
+          .navigate()
+          .forward()
+          .then(() => {
+            console.log("navigating to forward page");
+          });
+        break;
+      default:
+        browser
+          .navigate()
+          .refresh()
+          .then(() => {
+            console.log("refreshing page");
+          });
+        break;
+    }
   }
 }
 
