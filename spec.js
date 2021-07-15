@@ -33,9 +33,9 @@ describe("Test Angular webpages", function () {
     );
   });
 
-  using(Data.Testdata, function (data, description) {
+  using(Data.TestData, function (data, description) {
     it(
-      "Should open the practice page and perform all the operations and submit the form" +
+      "Should open the practice page and perform all the operations and submit the form -" +
         description,
       function () {
         BrowserAction.navigateToURL(Data.Project_Properties.practiceUrl);
