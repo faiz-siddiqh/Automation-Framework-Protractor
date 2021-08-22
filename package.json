@@ -1,5 +1,5 @@
 {
-  "name": "Automation-Framework-Protractor",
+  "name": "automation-framework-protractor",
   "dependencies": {
     "protractor": "7.0.0",
     "jasmine-data-provider": "2.2.0",
